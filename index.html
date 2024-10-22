@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>HAPPINESS CIMLAB INDEX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A onepage portfolio HTML template by Unslate.co">
+    <meta name="keywords" content="html, css, javascript, jquery">
+    <meta name="author" content="Unslate.co">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.8.1/nipplejs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.1.0/nouislider.min.css" />
+
+    <!-- Theme Style -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/shin.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.8.1/nipplejs.min.js" defer></script>
+
+    <style>
+        .slider-container {
+            width: 400px;
+            margin: 20px auto;
+        }
+        .slider-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Khoảng cách giữa các thanh trượt */
+        }
+        .label {
+            font-size: 18px;
+            font-weight: bold;
+            width: 50px;
+            margin-right: 10px; /* Khoảng cách giữa nhãn và thanh trượt */
+        }
+        .slider {
+            flex-grow: 1;
+        }
+        .marks {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-top: -10px;
+            padding-left: 60px; /* Căn lại các mốc giá trị với thanh trượt */
+        }
+        /* Style cho khung thông báo */
+        .message-box {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px; /* Khoảng cách giữa khung và các thành phần khác */
+            padding: 15px;
+            border: 2px solid #333; /* Đường viền khung */
+            border-radius: 10px;
+            background-color: #f0f0f0; /* Màu nền của khung */
+            color: #333; /* Màu chữ */
+            width: 80%; /* Chiều rộng của khung */
+            margin: 20px auto; /* Căn giữa khung */
+            display: none; /* Ẩn khung thông báo mặc định */
+        }
+
+        /* Flexbox cho các trường nhập liệu */
+        .form-row {
+            display: flex;
+            justify-content: space-between; /* Căn giữa các trường nhập liệu */
+            flex-wrap: wrap; /* Cho phép các mục nhập xuống dòng nếu cần */
+            margin-bottom: 20px; /* Khoảng cách giữa các hàng nhập liệu */
+        }
+
+        .form-group {
+            flex: 1; /* Tất cả các mục nhập đều có chiều rộng bằng nhau */
+            margin: 0 10px; /* Khoảng cách giữa các mục nhập */
+        }
+
+        .form-group label {
+            display: block; /* Đặt nhãn trên cùng của trường nhập liệu */
+            margin-bottom: 5px; /* Khoảng cách giữa nhãn và trường nhập liệu */
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <nav class="unslate_co--site-mobile-menu">
+        <div class="close-wrap d-flex">
+            <a href="#" class="d-flex ml-auto js-menu-toggle">
+                <span class="close-label">Close</span>
+                <div class="close-times">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                </div>
+            </a>
+        </div>
+        <div class="site-mobile-inner"></div>
+    </nav>
+
+    <div class="unslate_co--site-wrap">
+        <div class="unslate_co--site-inner">
+            <nav class="unslate_co--site-nav site-nav-target">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between text-left">
+                        <div class="col-3">
+                            <div class="site-logo">
+                                <a href="index.html" class="unslate_co--site-logo">HAPPINESS<span></span></a>
+                            </div>
+                        </div>
+                        <div class="col text-right">
+                            <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                                <li>
+                                    <a href="https://www.facebook.com/groups/168026416684908">
+                                        <img src="images/home1.jpg" alt="Image" width="45" style="vertical-align: middle; margin-right: 10px;">
+                                        Home
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
+                                <li>
+                                    <a href="#" class="js-menu-toggle">
+                                        <img src="images/control.jpg" alt="Menu Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+                                        Menu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="cover-v1 jarallax overlay" style="background-image: url('images/cover_bg_1.jpg');" id="home-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 text-left">
+                            <div class="slider-container">
+                                <h1 style="font-size: 24px;">HAPPINESS CIMLAB INDEX</h1>
+                                <form id="hciForm">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="name">Họ tên:</label>
+                                                <input type="text" id="name" required>
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="mssv">MSSV:</label>
+                                                <input type="text" id="mssv" required>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="cpa">CPA</label>
+                                                <input type="number" id="cpa" step="0.01" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="height">Height (m):</label>
+                                                <input type="number" id="height" step="0.01" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="weight">Weight (kg):</label>
+                                                <input type="number" id="weight" step="0.01" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="toeic">TOEIC Score (Hiện tại):</label>
+                                                <input type="number" id="toeic" step="1" required>
+                                            </div>
+                                        </div>
+            
+                                        
+                                    </div>
+            
+                                    <label>
+                                        <input type="checkbox" id="competition"> Đã hoặc Đang tham gia Sáng Tạo Trẻ, TechStart, NCKH ...
+                                    </label><br><br>
+            
+                                    <button type="button" onclick="calculateHCI()">Calculate HCI</button>
+                                </form>
+            
+                                <h2>HCI Result: <span id="result"></span></h2>
+                                <div class="message-box" id="adviceBox">
+                                    <span id="advice"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="joystick-container" style="position: relative; width: 100%; height: 300px;"></div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.1.0/nouislider.min.js"></script>
+            
+            <script>
+                function calculateHCI() {
+                    var CPA = parseFloat(document.getElementById('cpa').value);
+                    var H = parseFloat(document.getElementById('height').value);
+                    var W = parseFloat(document.getElementById('weight').value);
+                    var TOEIC = parseFloat(document.getElementById('toeic').value);
+                    var competition = document.getElementById('competition').checked;
+
+                    var coefficient;
+                    if (H >= 1.7) {
+                        coefficient = 0.65;
+                    } else if (H >= 1.65 && H < 1.7) {
+                        coefficient = 0.63;
+                    } else {
+                        coefficient = 0.6;
+                    }
+
+                    var idealWeight = (H - 1) * 90 + 3;
+                    var deltaW = Math.abs(W - idealWeight);
+
+                    // Tính điểm hệ số TOEIC
+                    var e = (TOEIC / 750) * 0.1;
+
+                    // Tính điểm sáng tạo
+                    var f = competition ? 1 * 0.05 : 0; 
+
+                    // Tính HCI với các tham số mới
+                    var HCI = (CPA / 3.2) * coefficient + (H / 1.7) * 0.1 + (idealWeight - 5 * deltaW) / idealWeight * 0.1 + e + f;
+
+                    var rawHCI = HCI;
+
+                    var roundedHCI = Math.round(HCI * 100) / 100;
+
+                    document.getElementById('result').textContent = roundedHCI.toFixed(2);
+
+                    var advice;
+                    if (rawHCI >= 0.90) {
+                        advice = "Chúc mừng bạn đã đạt yêu cầu chỉ số phát triển nguồn lực CIMLAB.";
+                    } else {
+                        advice = "Chúc bạn may mắn lần sau.";
+                    }
+
+                    // Hiển thị thông báo
+                    var adviceBox = document.getElementById('adviceBox');
+                    document.getElementById('advice').textContent = advice;
+                    adviceBox.style.display = 'block';
+                }
+            </script>
+
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>© 2024 HAPPINESS. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
