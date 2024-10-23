@@ -204,6 +204,12 @@
                     var TOEIC = parseFloat(document.getElementById('toeic').value);
                     var competition = document.getElementById('competition').checked;
 
+                    if (H < 1.4) {
+                        document.getElementById('result').textContent = 'NaN';
+                        document.getElementById('advice').textContent = 'Chiều cao của bạn không phù hợp vào vị trí phát triển nguồn nhân lực CIMLAB.';
+                        document.getElementById('adviceBox').style.display = 'block';
+                        return; 
+                    }
                     var coefficient;
                     if (H >= 1.7) {
                         coefficient = 0.7;
