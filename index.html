@@ -225,12 +225,15 @@
 
                     var rawHCI = HCI;
 
-                    var roundedHCI = Math.round(HCI * 100) / 100;
+                    // Làm tròn HCI với 2 chữ số sau dấu phẩy
+                    var roundedHCI = parseFloat(HCI.toFixed(2));
 
+                    // Hiển thị giá trị HCI đã làm tròn
                     document.getElementById('result').textContent = roundedHCI.toFixed(2);
 
+                    // So sánh giá trị gốc của HCI với 0.91
                     var advice;
-                    if (parseFloat(rawHCI.toFixed(2)) >= 0.91) {
+                    if (rawHCI >= 0.91) {
                         advice = "Chúc mừng bạn đã đạt yêu cầu chỉ số phát triển nguồn lực CIMLAB.";
                     } else {
                         advice = "Chúc bạn may mắn lần sau.";
