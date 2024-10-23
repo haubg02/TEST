@@ -216,13 +216,11 @@
                     var idealWeight = (H - 1) * 90 + 3;
                     var deltaW = Math.abs(W - idealWeight);
 
-                    // Tính điểm hệ số TOEIC
+
                     var e = (TOEIC / 750) * 0.075;
 
-                    // Tính điểm sáng tạo
                     var f = competition ? 1 * 0.075 : 0; 
 
-                    // Tính HCI với các tham số mới
                     var HCI = (CPA / 3.2) * coefficient + (H / 1.7) * 0.075 + (idealWeight - 5 * deltaW) / idealWeight * 0.075 + e + f;
 
                     var rawHCI = HCI;
@@ -232,7 +230,7 @@
                     document.getElementById('result').textContent = roundedHCI.toFixed(2);
 
                     var advice;
-                    if (rawHCI >= 0.91) {
+                    if (parseFloat(rawHCI.toFixed(2)) >= 0.91) {
                         advice = "Chúc mừng bạn đã đạt yêu cầu chỉ số phát triển nguồn lực CIMLAB.";
                     } else {
                         advice = "Chúc bạn may mắn lần sau.";
