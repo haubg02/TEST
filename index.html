@@ -203,13 +203,32 @@
                     var W = parseFloat(document.getElementById('weight').value);
                     var TOEIC = parseFloat(document.getElementById('toeic').value);
                     var competition = document.getElementById('competition').checked;
-
-                    if (H < 1.4) {
+            
+                    // Kiểm tra điều kiện cho TOEIC
+                    if (TOEIC <= 0 || TOEIC >= 990) {
                         document.getElementById('result').textContent = 'NaN';
-                        document.getElementById('advice').textContent = 'Chiều cao của bạn không phù hợp vào vị trí phát triển nguồn nhân lực CIMLAB.';
+                        document.getElementById('advice').textContent = 'TOEIC phải lớn hơn 0 và nhỏ hơn 990.';
                         document.getElementById('adviceBox').style.display = 'block';
-                        return; 
+                        return;
                     }
+            
+                    // Kiểm tra điều kiện cho CPA
+                    if (CPA <= 0 || CPA > 4) {
+                        document.getElementById('result').textContent = 'NaN';
+                        document.getElementById('advice').textContent = 'CPA phải lớn hơn 0 và không được vượt quá 4.';
+                        document.getElementById('adviceBox').style.display = 'block';
+                        return;
+                    }
+            
+                    // Kiểm tra điều kiện cho chiều cao
+                    if (H <= 1.4 || H >= 2) {
+                        document.getElementById('result').textContent = 'NaN';
+                        document.getElementById('advice').textContent = 'Chiều cao phải lớn hơn 1.4m và nhỏ hơn 2m.';
+                        document.getElementById('adviceBox').style.display = 'block';
+                        return;
+                    }
+            
+                    // Xử lý tính toán HCI
                     var coefficient;
                     if (H >= 1.7) {
                         coefficient = 0.7;
@@ -218,25 +237,24 @@
                     } else {
                         coefficient = 0.65;
                     }
-
+            
                     var idealWeight = (H - 1) * 90 + 3;
                     var deltaW = Math.abs(W - idealWeight);
-
-
+            
                     var e = (TOEIC / 750) * 0.075;
-
-                    var f = competition ? 1 * 0.075 : 0; 
-
+            
+                    var f = competition ? 1 * 0.075 : 0;
+            
                     var HCI = (CPA / 3.2) * coefficient + (H / 1.7) * 0.075 + (idealWeight - 5 * deltaW) / idealWeight * 0.075 + e + f;
-
+            
                     var rawHCI = HCI;
-
+            
                     // Làm tròn HCI với 2 chữ số sau dấu phẩy
                     var roundedHCI = parseFloat(HCI.toFixed(2));
-
+            
                     // Hiển thị giá trị HCI đã làm tròn
                     document.getElementById('result').textContent = roundedHCI.toFixed(2);
-
+            
                     // So sánh giá trị gốc của HCI với 0.91
                     var advice;
                     if (roundedHCI >= 1.15) {
@@ -248,14 +266,15 @@
                     } else {
                         advice = "Chúc bạn may mắn lần sau.";
                     }
-
-
+            
                     // Hiển thị thông báo
                     var adviceBox = document.getElementById('adviceBox');
                     document.getElementById('advice').textContent = advice;
                     adviceBox.style.display = 'block';
                 }
             </script>
+
+            
 
             <footer class="site-footer">
                 <div class="container">
